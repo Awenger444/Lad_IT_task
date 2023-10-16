@@ -1,9 +1,16 @@
 # Тестовое задание для отбора на ознакомительную практику в IT-компанию Lad
-[Описание задачи](https://lad-academy.ru/zadanie-dlya-backend-stazhirovki)
+## [Описание задачи](https://lad-academy.ru/zadanie-dlya-backend-stazhirovki)
 ## Решение:
 Приложение принимает список URL-адресов и возвращает файл формата pdf, в котором для каждой указанной веб-страницы содержатся три самых часто встречающихся слова длиннее четырёх символов.
-### Запуск приложения:
+## Запуск приложения:
 Устанавливаем зависимости:
-`npm ci`
+````npm ci````
 Запуск проекта:
-`npm start`
+````npm start````
+## Пример использования:
+````
+curl -X POST
+-H 'Content-Type: application/json'
+-d '{ "urls": ["https://yandex.ru", "https://vk.com", "https://habrahabr.ru"] }'
+http://localhost:3000 > urls.pdf
+````
